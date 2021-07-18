@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller
+class Cacapalavras extends CI_Controller
 {
 
     /**
@@ -22,5 +22,25 @@ class Welcome extends CI_Controller
     public function index()
     {
         $this->load->view('cacaPalavras');
+    }
+
+    public function palavras()
+    {
+        $palavras = [
+            "peixe",
+            "social",
+            "cola",
+            "coincidência",
+            "lavagem",
+            "sobremesa",
+            "monitor",
+            "montanhismo",
+            "fragmento",
+            "estreito",
+            "pão",
+            "leite"
+        ];
+
+        echo json_encode($palavras);
     }
 }
